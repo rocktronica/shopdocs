@@ -1,0 +1,99 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 2rem;
+}
+
+body {
+  line-height: 1.5;
+  max-width: 42rem;
+}
+
+img {
+  max-width: 75%;
+  display: block;
+}
+
+ol img,
+ul img {
+  max-height: 10rem;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+table {
+  margin: 0 0 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 1.75rem;
+  margin-top: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1.125rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+table {
+  table-layout: fixed;
+  min-width: 75%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #000;
+  text-align: center;
+}
+
+hr {
+  margin: 2rem 0;
+}
+
+li {
+  margin: 0 0 0.25rem;
+}
+
+footer {
+  border-top: 1px solid #000;
+  font-size: 0.75rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+}
