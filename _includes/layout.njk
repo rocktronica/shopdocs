@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>{{ content | getH1Text }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="/static/styles.css">
   </head>
@@ -12,7 +12,8 @@
         {{ content | safe }}
     </article>
     <footer>
-        <p>by Tommy for Dogbotic's "DIY Synthesizers for the Electronically Unacquainted" workshop - Spring 2024</p>
+        <p>by Tommy for Dogbotic's "DIY Synthesizers for the Electronically Unacquainted" workshop</p>
+        <p>"Spring 2024" section - Last updated {{ page.date | postDate }}</p>
         <p><a href="https://github.com/rocktronica/shopdocs">https://github.com/rocktronica/shopdocs</a></p>
     </footer>
   </body>
