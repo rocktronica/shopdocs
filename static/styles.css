@@ -97,3 +97,13 @@ footer {
 footer p {
   margin: 0;
 }
+
+@media print {
+  @page {
+    margin: 2rem;
+  }
+
+  html {
+    padding: 0;
+  }
+}

@@ -1,8 +1,3 @@
----
-layout: layout.njk
-title: Gotchas!
----
-
 # Gotchas!
 
 I wanted to quickly write on a couple things I’ve noticed in class that have tripped people up:
