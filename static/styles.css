@@ -36,6 +36,13 @@ table {
   margin: 0 0 1rem;
 }
 
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0;
+}
+
 h1,
 h2,
 h3,
