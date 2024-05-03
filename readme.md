@@ -11,4 +11,4 @@ node make_pdfs.js
 
 ## License
 
-TBD? For now, just ask, I guess
+CC BY-SA 4.0
