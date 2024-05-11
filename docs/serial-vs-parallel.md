@@ -1,8 +1,8 @@
-# Serial and Parallel
+# Serial vs Parallel
 
 ![Spy vs Spy but w/ schematics](/static/images/serial-vs-parallel/spy-vs-spy.png)
 
-So far we've been using solitary resistors<small>*</small> in class, but they don't always have to be by themselves. Introducing: serial and parallel resistors!
+So far we've been using solitary resistors<small>*</small> in class, but they don't always have to be so lonely. Introducing... serial and parallel resistors!
 
 <small>* I'll use "resistor" as a blanket term for the typical resistor _and_ all variants; potentiometers (AKA variable resistors), LDRs (AKA Light-Dependent Resistors or photoresistors), vegetables, your skin, pencil graphite, anything you can use to limit current!</small>
 
