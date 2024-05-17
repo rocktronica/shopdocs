@@ -10,7 +10,7 @@ body {
 }
 
 img {
-  max-width: 75%;
+  max-width: 100%;
   display: block;
 }
 
@@ -98,6 +98,11 @@ small {
   display: inline-block;
   font-size: 0.8rem;
   line-height: 1.25;
+}
+
+ins {
+  text-decoration: none;
+  font-style: italic;
 }
 
 footer {
