@@ -25,6 +25,7 @@ const getPageAndBrowser = async (url) => {
 
   const page = await browser.newPage();
   await page.goto(url, { waitUntil: "networkidle2" });
+  await page.waitForTimeout(2000); // Arbitrary! Wish this were smarter but who cares
 
   return { page, browser };
 };
