@@ -14,6 +14,10 @@ img {
   display: block;
 }
 
+img[src*="size=most"] {
+  max-width: 75%;
+}
+
 ol img,
 ul img {
   max-height: 10rem;
