@@ -65,6 +65,6 @@ The carrier wave frequency is licensed to each radio station. The message wave c
 
 AM radio uses, you guessed it!, amplitude modulation and FM uses frequency.
 
-(The reason we can't hear these waves without a radio is because the carrier frequencies are well beyond our audible spectrum. It would be like hearing infrared or the microwaves that heat up our leftoveres.)
+(The reason we can't hear these waves without a radio is because the carrier frequencies are well beyond our audible spectrum. It would be like hearing infrared or the microwaves that heat up our leftovers.)
 
 When you tune a radio to your favorite station, it's filtering to the carrier frequency. It then demodulates the message from the carrier from and sends it to an amp to drive a speaker.
