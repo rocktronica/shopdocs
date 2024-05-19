@@ -1,1 +1,8 @@
-# sup
+---
+layout: index.njk
+eleventyExcludeFromCollections: true
+---
+
+# shopdocs
+
+## Index

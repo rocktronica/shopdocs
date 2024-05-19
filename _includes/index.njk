@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ content | getH1Text }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <article>
+        {{ content | safe }}
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Last updated</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%- for post in collections.docs -%}
+                    <tr>
+                        <td>
+                            <a href="{{ post.url }}">
+                                {{ post.content | getH1Text }}
+                            </a>
+                        </td>
+                        <td>
+                            {{ post.date | postDate }}
+                        </td>
+                    </tr>
+                {%- endfor -%}
+            </tbody>
+        </table>
+    </article>
+    <footer>
+        <p>
+          License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+          &nbsp; / &nbsp;
+          Source: <a href="https://github.com/rocktronica/shopdocs">https://github.com/rocktronica/shopdocs</a>
+        </p>
+    </footer>
+  </body>
+</html>
