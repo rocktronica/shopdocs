@@ -1,0 +1,143 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0.25in;
+}
+
+body {
+  line-height: 1.5;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+img[src*="size=least"] {
+  max-width: 25%;
+}
+
+img[src*="size=half"] {
+  max-width: 50%;
+}
+
+img[src*="size=most"] {
+  max-width: 75%;
+}
+
+img[src*="float=right"] {
+  float: right;
+  margin: 0 0 2rem 2rem;
+}
+
+ol img,
+ul img {
+  max-height: 10rem;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+table {
+  margin: 0 0 1rem;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 1.75rem;
+  margin-top: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1.125rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+table {
+  table-layout: fixed;
+  min-width: 75%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #000;
+  text-align: center;
+}
+
+hr {
+  margin: 2rem 0;
+}
+
+li {
+  margin: 0 0 0.25rem;
+}
+
+small {
+  display: inline-block;
+  font-size: 0.8rem;
+  line-height: 1.25;
+}
+
+ins {
+  text-decoration: none;
+  font-style: italic;
+}
+
+footer {
+  border-top: 1px solid #666;
+  color: #666;
+  font-size: 0.75rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+footer p {
+  margin: 0 0 0.5rem;
+}
+
+@media print {
+  @page {
+    margin: 0.25in;
+    padding: 0;
+  }
+}

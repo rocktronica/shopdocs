@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perf/Proto-board Tips</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <article>
+        <h1>Perf/Proto-board Tips</h1>
+<p><img src="/static/images/perf-proto-board-tips/IMG_1329-r.jpg" alt="A perfboard I made"></p>
+<h2>1. Decide on your goals up front.</h2>
+<p>An ugly-but-functional board is a lot different than a piece of art, etc. Does it matter where the controls are? Does it need to “make sense” when you look at it? Think form vs function and interface stuff.</p>
+<h2>2. Draw a schematic, and work off of that.</h2>
+<p>IMHO, breadboards are ephemeral and make for lousy sources of truth. In addition to being a better historical record, a drawn schematic will also test your conceptual understanding of the circuit and free you from thinking about it only in terms of its breadboard construct (which will alleviate some of your bus/row conundrums and help when/if you wanna get PCBs made).</p>
+<p>Veroboards/stripboards/perma-protoboards/etc are fine to start but will force your hand on layout and aesthetics. This might be a Hot Take, sorry!</p>
+<h2>3. Divide and conquer.</h2>
+<p>A big, complex circuit is composed of smaller, simpler circuits: power, oscillator, amp, interface, etc. Try to break it down by function and build each by itself.</p>
+<p>Where it makes sense, you can also give each functional circuit its own &quot;module&quot; board, letting you easily rearrange/expand the big circuit later. (Look into plexiglass scorers to cut protoboard, &quot;nibbling tools&quot; for thicker stuff)</p>
+<h2>4. Make room, make room!</h2>
+<p>Unless you're specifically trying to work into a small enclosure, give yourself ~20% more space than you think you need. The modular boards idea is related to this.</p>
+<h2>5. Fail early, often.</h2>
+<p>That collection of small circuits means you can test+debug each one individually with clear, isolated expectations and do each as you build it before moving to the next.</p>
+<p>The last thing you wanna do is solder for days only to find the damn thing doesn't turn on.</p>
+<h2>6. Be kind to yourself.</h2>
+<p>Take breaks, drink water, make sure you've got fresh air (like, literally), you know the
+deal.</p>
+<p>My advice for getting good at anything is to make peace with being bad at it for a long time.</p>
+<p>(Adapted from https://community.dogboticlabs.com/posts/29150058/comments/73490542)</p>
+
+    </article>
+    <footer>
+        <p>
+          by Tommy for Dogbotic's "DIY Synthesizers for the Electronically Unacquainted" workshop<br />
+        </p>
+        <p>
+          Last updated Nov 20, 2022
+          &nbsp; / &nbsp;
+          Spring 2024 - Saturday section
+        </p>
+        <p>
+          License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+          &nbsp; / &nbsp;
+          Source: <a href="https://github.com/rocktronica/shopdocs">https://github.com/rocktronica/shopdocs</a>
+        </p>
+    </footer>
+  </body>
+</html>

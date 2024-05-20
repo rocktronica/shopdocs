@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ content | getH1Text }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <article>
+        {{ content | safe }}
+    </article>
+    <footer>
+        <p>
+          by Tommy for Dogbotic's "DIY Synthesizers for the Electronically Unacquainted" workshop<br />
+        </p>
+        <p>
+          Last updated {{ page.date | postDate }}
+          &nbsp; / &nbsp;
+          Spring 2024 - Saturday section
+        </p>
+        <p>
+          License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+          &nbsp; / &nbsp;
+          Source: <a href="https://github.com/rocktronica/shopdocs">https://github.com/rocktronica/shopdocs</a>
+        </p>
+    </footer>
+  </body>
+</html>
