@@ -1,12 +1,13 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  padding: 2rem;
+  margin: 0.25in;
 }
 
 body {
   line-height: 1.5;
   max-width: 42rem;
+  margin: 0 auto;
 }
 
 img {
@@ -123,10 +124,7 @@ footer p {
 
 @media print {
   @page {
-    margin: 2rem;
-  }
-
-  html {
+    margin: 0.25in;
     padding: 0;
   }
 }
