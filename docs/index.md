@@ -5,4 +5,4 @@ eleventyExcludeFromCollections: true
 
 # shopdocs
 
-## Index
+## (work)shop doc(ument)s

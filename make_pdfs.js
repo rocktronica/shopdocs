@@ -9,6 +9,7 @@ const naiveExec = async (command) => (await exec(command)).stdout.trim();
 
 const rootUrl = "http://localhost:8080/docs/";
 const dir = "output";
+const siteDownloadsDir = "_site/static/downloads";
 
 const confirmUrl = async () => {
   try {
@@ -73,8 +74,11 @@ const run = async (slugQuery) => {
   slugs.forEach((slug) => exportPdf(slug));
 
   console.log();
-};
 
-// TODO: deploy PDFs!
+  await naiveExec(`mkdir -pv "${siteDownloadsDir}"`);
+  console.log(`Copying to ${siteDownloadsDir}`);
+  await naiveExec(`cp -a  ${dir}/. ${siteDownloadsDir}/`);
+  console.log();
+};
 
 run(process.argv[2]);

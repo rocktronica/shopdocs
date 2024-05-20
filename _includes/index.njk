@@ -6,6 +6,10 @@
     <title>{{ content | getH1Text }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        table { width: 100%; table-layout: auto; }
+        table th, table td { padding: .125rem .5rem; text-align: left; }
+    </style>
   </head>
   <body>
     <article>
@@ -14,7 +18,8 @@
         <table>
             <thead>
                 <tr>
-                    <th>Title</th>
+                    <th>Web</th>
+                    <th>PDF</th>
                     <th>Last updated</th>
                 </tr>
             </thead>
@@ -25,6 +30,9 @@
                             <a href="{{ post.url }}">
                                 {{ post.content | getH1Text }}
                             </a>
+                        </td>
+                        <td>
+                            <a href="/static/downloads/{{ post.fileSlug }}.pdf">{{ post.fileSlug }}.pdf</a>
                         </td>
                         <td>
                             {{ post.date | postDate }}
