@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soldering</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="/shopdocs/static/styles.css">
+  </head>
+  <body>
+    <article>
+        <h1>Soldering</h1>
+<p>(this is kind of a brain dump, sry!)</p>
+<p><img src="/shopdocs/static/images/soldering/apc.jpg?size=most" alt="APC PCB being soldered"></p>
+<p>When you  want to give your circuit a permanent home beyond the breadboard, it's time to solder it up.</p>
+<p>Solder is like an electric glue. It's a metal that melts at 600°F and re-solidifies when cool, conductively connecting anything it touches.</p>
+<h2>What to get when you're starting out</h2>
+<p>I think the best way to learn is through a <a href="https://www.jameco.com/z/AK-100-Elenco-Electronics-Practice-Soldering-Kit-with-Soldering-Iron_2124218.html">&quot;learn to solder&quot; kit</a>. Get one that comes with a soldering iron, solder, and a practice PCB (Printed Circuit Board). Pick up needle-noise pliers and and wire cutters too if you don't already have them.</p>
+<p><img src="/shopdocs/static/images/soldering/practice_pcb.jpg?size=most" alt="old &quot;siren&quot; practice PCB">
+<small>Don't judge the messiness, I was still learning!</small></p>
+<p>(A cheap soldering iron won't last forever, but it <em>will</em> last long enough for you to decide if you like it enough to want to upgrade. I have a Weller; Hakko is a popular brand. Spend $100-$200 and you'll be set, probably for life.)</p>
+<p>As for what kind of solder to get, the big question is &quot;leaded or unleaded?&quot;. The safe and lawsuit-avoidant answer is lead-free, but leaded solder is easier when you're starting out. (In either case, have good ventilation and wash your hands when you're done.) Prefer solder with a &quot;rosin core&quot;; that helps it melt and is nice to work with.</p>
+<p><strong>IMPORTANT:</strong> Do <em>not</em> get any soldering equipment from your friendly local hardware store. No guns or torches, nothing that's butane-powered, etc. Soldering tools for stained glass artists and jewelry makers are similarly unfit.</p>
+<!-- TODO: perfboard vs perma-protoboard vs protoboard vs printed circuit board -->
+<h2>How I think about soldering, summarized</h2>
+<p>Before beginning, get the component you want to solder held in place so it won't wiggle out.</p>
+<ol>
+<li><strong>Bring heat to the joint</strong><br>
+Put the tip of the iron wherever you want the solder to go. Hold it there for a second or so to get things hot. <sup>1</sup></li>
+<li><strong>Bring solder to the heat</strong><br>
+Without removing the iron's tip, introduce solder. It should melt into there like butter on a hot pan. (If you're not sure how much you need, it's easier to add more later than remove excess, so go lighter!) This takes about a second. <sup>2</sup></li>
+<li><strong>Remove solder</strong><br>
+Still without removing the iron's tip, pull the solder away. <sup>3</sup></li>
+<li><strong>Remove heat</strong><br>
+Give the heat from the iron a few seconds to let the melted solder flow and settle into place. Then, pull the soldering iron away.</li>
+</ol>
+<p>When done, inspect. A good joint will look like a cone and won't wiggle at all if you try to move the component around. We want it physically fixed into place. Trim any long leads off before moving on.</p>
+<p>Bad solder joints usually look ball-ish, like the solder wasn't pulled fully into the joint OR there's so much solder that it formed its own weird blob away from wherever you wanted it to go.</p>
+<p><small>1: If there's more metal to heat up, it will take more time.</small></p>
+<p><small>2: You'll eventually figure out that you can reverse the order of these first two steps or even do them at the same time and it works just fine, but I like to conceptually break them into distinct actions. A common hickup is from putting solder on the iron and then trying to bring that hot solder to a cold joint; it doesn't flow well because the solder will stick to heat.</small></p>
+<p><small>3: If you skip this step and pull the iron away first, you'll have the solder wire stuck to the joint. NBD, just melt it off.</small></p>
+<h2>Other notes</h2>
+<ul>
+<li>Soldering as a technical skill can be learned in 15min, but what you do with it and how you use it are mostly up to personal taste/style! It's like what typing is to writing — a tool for an art but not the art itself.</li>
+<li>I strongly recommended soldering up other people's designs on ready-made PCBs (Printed Circuit Boards) before soldering your own circuits.
+<ul>
+<li>I did a couple Velleman kits when starting out. <a href="https://www.tindie.com/">Tindie</a> is a great source for indie DIY kits. I like <a href="https://www.tindie.com/stores/alpenglow/">Alpenglow</a>. Otherwise, google &quot;soldering kit&quot; and find something simple. (<a href="https://www.oskitone.com/">I make some too, hi.</a>)</li>
+<li>Avoid anything labelled &quot;SMT&quot; or &quot;surface mount&quot;. These parts are small and require some specialization. Instead, we want &quot;through-hole&quot; where the parts all go through holes (get it?) on the board.</li>
+</ul>
+</li>
+<li>Some good non-board starter soldering projects
+<ul>
+<li>Male header on 9v snap so you can plug it into a breadboard</li>
+<li>LED with current-limiting resistor for one of its legs</li>
+<li>&quot;Tinning&quot; the stranded ends of wire cable that connect the speakers to a hi-fi stereo</li>
+<li>Permanently connect jumper wires onto speaker terminals or anything else you want to breadboard with without using up gator clips</li>
+</ul>
+</li>
+<li>For your own circuits, you have a choice of board &quot;canvas&quot;:
+<ul>
+<li>Options
+<ul>
+<li>Protoboards are the default. They have a grid of holes that you plop things into to solder, and there's copper around each hole.</li>
+<li>Perfboards are cheap protoboards. They're thinner and can be cut to arbitrary sizes, and there's usually only copper on one side of the board.</li>
+<li>Veroboard/stripboard has parallel tracks along the length of the board that connect pads. You cut a track apart when you want a conductive break.</li>
+<li>Perma-protoboards are protoboards arranged like breadboards. You can basically do a 1:1 transfer.</li>
+</ul>
+</li>
+<li>Breadboards have a hole spacing (aka pitch) of .1&quot; (or 2.54mm). You almost certainly want the same pitch for your board.</li>
+<li>Which style you choose is up to you and what the project needs; there is no &quot;best&quot;. Do you want your circuit to still be arranged like it is on the breadboard? Do you want to rely on the board for connections or run your own wires? Components on just one or both sides of the board? A non-standard size? People have strong opinions here; get one or two of each and see what you like.</li>
+<li>There is some annoying overlap in terminology, and folks (probably me included) will use one word to refer to other kinds of boards. Also, I think all are technically breadboards but the ones we use in class are called &quot;solderless breadboards&quot;? Whatever, it's mostly harmless, just read all the text of what you're buying.</li>
+</ul>
+</li>
+<li>For parts without long legs to bend and hold them on place on the board, you can use tape or wall-mounting putty to affix things.</li>
+<li>Get into the habit of visually inspecting as you work. Many components like button switches or pots need to be perfectly level on the board, and it's much easier to fix that when you haven't soldered all of their legs in place.</li>
+<li>People commonly recommend soldering components in order from low-to-high (ie, little resistors and caps, then bigger caps, then switches, then pots, and so on). The idea is that the smaller components will be less in-the-way as you work up to the bigger parts.
+<ul>
+<li><em>Tommy's Hot Take</em>: For big circuits, I prefer to solder by &quot;function&quot;. So you solder enough to light the LED <em>then</em> the oscillator <em>then</em> the amp, etc and so on. The idea is that you're getting ~constant feedback on whether or not what you just soldered worked before moving on to the next part. (The PCB kits I design all do this and people seem to like it.)</li>
+</ul>
+</li>
+<li>Other gear to get
+<ul>
+<li>Vise or &quot;helping hands&quot; tool to hold your board firmly while you work</li>
+<li>Solder sucker or braid to remove solder when you mess up</li>
+<li>Fume extractor to make your air less toxic</li>
+<li>Multimeter to help debug why things aren't working when things don't work</li>
+</ul>
+</li>
+</ul>
+
+    </article>
+    <footer>
+        <p>
+          by Tommy for Dogbotic's "DIY Synthesizers for the Electronically Unacquainted" workshop<br>
+        </p>
+        <p>
+          Last updated May 19, 2024
+          &nbsp; / &nbsp;
+          Spring 2024 - Saturday section
+        </p>
+        <p>
+          License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+          &nbsp; / &nbsp;
+          Source: <a href="https://github.com/rocktronica/shopdocs">https://github.com/rocktronica/shopdocs</a>
+        </p>
+    </footer>
+  </body>
+</html>

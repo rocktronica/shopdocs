@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="/shopdocs/static/styles.css">
+  </head>
+  <body>
+    <article>
+        <h1>Modulation</h1>
+<p><img src="/shopdocs/static/images/modulation/am-pm.png?size=half&amp;float=right" alt="AM and PM"></p>
+<p>&quot;Modulation&quot; just means one thing altering or varying another. For sound, those two things are waves. The first wave is the <em>carrier</em>, and it's the rate of modulation. The second wave is the <em>message</em>, and it's where the information is.</p>
+<p>Let's build some modulators to get a better idea of what exactly that means.</p>
+<p>There are two kinds of wave modulation that we can roughly implement with our workshop kits, and they're conveniently well known to musicians: Tremolo and Vibrato.</p>
+<h2>Amplitude modulation = Tremolo</h2>
+<p>Flutter your hand over your mouth as you sing a long note... that's tremolo! Tremolo is the altering of the volume of a sound, where the frequency is otherwise unaffected. Musical examples are things like rotating Leslie organ speakers and, of course, tremolo effects pedals.</p>
+<p><small>I've learned there's a &quot;tremolando&quot; version of tremolo that's about making a note trill or reiterate quickly, like fast violin bowing or drum rolls. Our tremolo here is not going to be that kind, but you might enjoy thinking about how it could be.</small></p>
+<p><img src="/shopdocs/static/images/modulation/am-schematic.png" alt="AM schematic"></p>
+<p>To make tremolo:</p>
+<ol>
+<li>Build a Low Frequency Oscillator (LFO) to blink an LED. This is the carrier.</li>
+<li>Separately, build an audio-rate pitch oscillator. This is the message.</li>
+<li>The message oscillator's output connects to a voltage divider made from a Light Dependant Resistor (LDR) and some big resistor. The divider's junction is the new audio output.</li>
+<li>Move the LED closer to the LDR so the pitch is audible when it's lit and less audible when it's dark.</li>
+</ol>
+<p>You should hear an audible change in volume matched in tempo to the LED's blinking.</p>
+<p>Other things to try/consider:</p>
+<ul>
+<li>All values besides the LED's resistor are made up but should work okay. Try a big pot instead of 100k on the voltage divider to vary the tremolo's depth.</li>
+<li>Instead of the LFO, a fidget spinner atop an LDR will make a kind of electromechanical tremolo, where the carrier frequency decays as the spinner slows down. Mount it on a sturdy enclosure for a tremolo pedal you kick into action.</li>
+<li>Make a &quot;vactrol&quot; by coupling the LED to the LDR in heat-shrink tubing to cut down on environmental light affecting the frequency.</li>
+<li>Remember when we hooked the output of one oscillator into the control input of another to make it beep? Would you consider totally-on-then-totally-off a kind of amplitude modulation?</li>
+<li>Different wave types will change the effect. Try a low pass filter (ex: 10k resistor and 220uF cap) from the LFO before the LED. The LED won't light as brightly but it will pulse gently instead of strobe.</li>
+<li>Google &quot;LDR tremolo&quot; for nicer versions!</li>
+</ul>
+<h2>Frequency modulation = Vibrato</h2>
+<p>Vibrato, on the other hand, is the altering of frequency, where amplitude is otherwise unaffected. When violinists wiggle their wrist/finger while fretting to subtly change the note's pitch, that's vibrato.</p>
+<p><img src="/shopdocs/static/images/modulation/pm-schematic.png" alt="PM schematic"></p>
+<p>To make vibrato:</p>
+<ol>
+<li>Build an LFO to blink an LED, the carrier frequency.</li>
+<li>Separately, build an audio-rate pitch oscillator, the message frequency. Make it a &quot;light theremin&quot; by having it use an Light Dependant Resistor (LDR).</li>
+<li>Move the LDR near the LED so the pitch goes high when it's lit and low when it's unlit</li>
+</ol>
+<p>Our vibrato sounds closer to a siren than what a violinist would do, but it is still technically frequency modulation and vibrato.</p>
+<p>Most of the things to try/consider for tremolo are equally relevant for vibrato.</p>
+<ul>
+<li>The low pass filter trick is great here to glide between the high and low frequencies.</li>
+<li>Can you change the min/max frequency of the audio-rate oscillator? You could shift the high end with a serial resistor by the LDR, and shift the low end with a separate always-on LED near the LDR.</li>
+<li>How else can we make frequency modulation? <span style="display: inline-block; transform: rotate(180deg);"><small>Hint: sequencers</small></span></li>
+<li>Annoying fact: The tremolo bar on your Stratocaster is misnamed. It's doing vibrato, not tremolo. <a href="https://en.wikipedia.org/wiki/Vibrato_systems_for_guitar">Sorry, Leo Fender</a>.</li>
+</ul>
+<hr>
+<h2>AM and FM on the radio</h2>
+<p>Yep! Radios use AM and FM.</p>
+<p>The carrier wave frequency is licensed to each radio station. The message wave contains the music (or talk banter or commercials or whatever). Radio stations modulate the two and broadcast it out. The air around us is filled with the electromagnetic cacophony of all of them mixed together.</p>
+<p>AM radio uses, you guessed it!, amplitude modulation and FM uses frequency.</p>
+<p>(The reason we can't hear these waves without a radio is because the carrier frequencies are well beyond our audible spectrum. It would be like hearing infrared or the microwaves that heat up our leftovers.)</p>
+<p>When you tune a radio to your favorite station, it's filtering to the carrier frequency. It then demodulates the message from the carrier from and sends it to an amp to drive a speaker.</p>
+
+    </article>
+    <footer>
+        <p>
+          by Tommy for Dogbotic's "DIY Synthesizers for the Electronically Unacquainted" workshop<br>
+        </p>
+        <p>
+          Last updated May 19, 2024
+          &nbsp; / &nbsp;
+          Spring 2024 - Saturday section
+        </p>
+        <p>
+          License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+          &nbsp; / &nbsp;
+          Source: <a href="https://github.com/rocktronica/shopdocs">https://github.com/rocktronica/shopdocs</a>
+        </p>
+    </footer>
+  </body>
+</html>

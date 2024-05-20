@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gotchas!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="/shopdocs/static/styles.css">
+  </head>
+  <body>
+    <article>
+        <h1>Gotchas!</h1>
+<p>I wanted to quickly write on a couple things I’ve noticed in class that have tripped people up:</p>
+<ol>
+<li><strong>This stuff is small!</strong> Parts are genuinely, physically hard to see.</li>
+<li><strong>It's strange!</strong> Even when we can see what's in front of us, it's unfamiliar.</li>
+<li><strong>Its instructions are unclear!</strong> Hmph!</li>
+</ol>
+<p>Let's see what we can do...</p>
+<h2>1. Small stuff</h2>
+<p><img src="/shopdocs/static/images/gotchas-and-debugging/iphone_magnifier.jpg?size=most" alt="phone as magnifier"></p>
+<ul>
+<li>You can't see without good lighting. Start there.</li>
+<li>Make like grandpa and break out the magnifying glass. In a pinch, your phone's camera also makes a fine magnifier!</li>
+<li>When appropriate, label components so you aren't relying solely on good eyesight. Resistor color codes are notoriously hard to read and your kit's are labelled specifically for this reason. I like to label IC chips. You can also organize your parts into labeled bins, etc.</li>
+<li>The floppy jumpers are excellent for quick wiring but can turn into a confusing jungle when there are lots of them. You can try optimizing for shorter wires, or break up one spot with lots of connections into multiple spots on the breadboard, or develop a convention about which colors to use for what function. Methodical patience goes a long way here. Of course, you can make your own wires or buy pre-cut jumper kits too!</li>
+</ul>
+<h2>2. Strange stuff</h2>
+<p>The two big unfamiliarities I see are for the breadboard and then the IC chips.</p>
+<p>Recall that under the hood of your breadboard are rows and columns of conducting metal that grip and connect anything that's plugged into them. Crucially, anywhere there's a gap in the metal there won't be a connection!</p>
+<p><img src="/shopdocs/static/images/gotchas-and-debugging/breadboard.png?size=most" alt="breadboard"></p>
+<p>As for IC chips, with the its notch/dot pointed left and its text facing you to read, its pins are ordered counter-clockwise starting at the lower left. This is how they'll be on your breadboard.</p>
+<p><img src="/shopdocs/static/images/gotchas-and-debugging/dip_chips.png?size=most" alt="DIP chip"></p>
+<p>It's common to see chips drawn in portrait mode with the notch at the top too. It's just a rotated view — pin order is identical.</p>
+<p>Different chips will have different pin counts but will thankfully all follow the same pin ordering convention.</p>
+<h2>3. Unclear stuff</h2>
+<p>Perhaps counterintuitively, the best remedy for unclear instructions is to make them shorter and more technical.</p>
+<p>Here are three not-incorrect instructions on how to light an LED:</p>
+<ol>
+<li>Connect a nine volt battery snap to a <span>new or freshly charged nine volt battery. <span>Connect one side of a green gator wire cable thing to the exposed metal <span>end of the battery snap's black wire and a different but also <span>green gator to the other wire, the red one, the metal part. <span>Find a resistor with bands colored orange orange brown and connect one leg to <span>the other end of the second green gator and the other leg <span>of the resistor to a yellow gator clip. <span>Notice how the LED has a <span>long leg and a short leg? Clip the <span>other end of the yellow gator to its short leg <span>Finally, the longer leg of the LED <span>connects to <span>remaining clip on <span>the <span>first <span>yellow <span>gator.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+<li><img src="/shopdocs/static/images/gotchas-and-debugging/led_photo.jpg" alt="lighting an LED"></li>
+<li><img src="/shopdocs/static/images/gotchas-and-debugging/led_schematic.png" alt="LED schematic"></li>
+</ol>
+<style>span {font-size: .95em;}</style>
+<p>Which do you prefer? Why?</p>
+<p>(That was all a lead-in for this week's lesson on schematics. You got that, right?)</p>
+<hr>
+<h2>Other Debugging Tips</h2>
+<p><img src="http://iamnotagoodartist.com/wp-content/uploads/2011/04/talktome.png?size=least&amp;float=right" alt="rubber duck"></p>
+<ul>
+<li>Get your <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">rubber duck</a> and start talking to it, out loud. Explain the problem you have and what you're doing about it. Somehow, verbally articulating an issue can manifest a solution. It works! It's real! I've done it for years! (See also: <a href="https://en.wikipedia.org/wiki/Pointing_and_calling">Shisa Kanko</a>)</li>
+<li>Build incrementally and test as you go. Light the LED → make a NOT gate or permutate the NAND (see below) with the CD4093 → convert it into an oscillator and strobe → make it faster! → connect it to your amp → and so on. Fixing small, incremental changes is much easier than fixing a whole, completed circuit.</li>
+<li>Practice being descriptive-but-succinct when you describe things. &quot;Pin 3 to pin 3&quot; isn't nearly as valuable as &quot;4093's pin 3 to 386's pin 3&quot;. Do this in your head, to your rubber duck, in class, and to any loved ones who will listen.</li>
+<li>Draw things, take notes, doodle. Interpret what I'm saying into your own words.</li>
+<li>Be kind to yourself! Be <em>patient</em> with yourself!</li>
+</ul>
+<h3>Exercise: Permutate the NAND</h3>
+<p>I used to do this in class but we ran out of time. (It's also not super exciting so oh well whataryagonnado.) Still, it's a good, simple exercise to see how a CD4093 NAND functions and get practice connecting jumper wires around. When all else fails and nothing seems to work, build this.</p>
+<ol>
+<li><strong>Power CD4093:</strong> pin 14 to +, pin 7 to -</li>
+<li><strong>Default inputs:</strong> pin 1 to -, pin 2 to -</li>
+<li><strong>Show output:</strong> pin 3 to 330 resistor to LED (positive/long leg) to -</li>
+</ol>
+<p><img src="/shopdocs/static/images/gotchas-and-debugging/permutate_the_nand.png?size=most" alt="permutate the NAND"></p>
+<p>Finish the truth table by alternating pins 1 and 2 on the + and - power rails. If the LED lights, the output is +; if not, it's -.</p>
+<table>
+<thead>
+<tr>
+<th>Pin 1<br>Input A</th>
+<th>Pin 2<br>Input B</th>
+<th>Pin 3<br>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>-</td>
+<td>+</td>
+<td></td>
+</tr>
+<tr>
+<td>+</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>+</td>
+<td>+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Did it work as you expect?</p>
+<div style="transform: rotate(180deg);"><small>Answers: +, +, +, -</small></div>
+    </article>
+    <footer>
+        <p>
+          by Tommy for Dogbotic's "DIY Synthesizers for the Electronically Unacquainted" workshop<br>
+        </p>
+        <p>
+          Last updated May 19, 2024
+          &nbsp; / &nbsp;
+          Spring 2024 - Saturday section
+        </p>
+        <p>
+          License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+          &nbsp; / &nbsp;
+          Source: <a href="https://github.com/rocktronica/shopdocs">https://github.com/rocktronica/shopdocs</a>
+        </p>
+    </footer>
+  </body>
+</html>
