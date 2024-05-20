@@ -14,7 +14,7 @@ const confirmUrl = async () => {
   try {
     await exec(`wget -q --spider "${rootUrl}"`);
   } catch (error) {
-    console.log(`${url} is not available`);
+    console.log(`${rootUrl} is not available`);
     console.log(`Try 'npx @11ty/eleventy --serve'`);
     process.exit();
   }
@@ -47,22 +47,34 @@ const exportPdf = async (slug) => {
   await browser.close();
 };
 
-const run = async () => {
+const getSlugs = async () => {
   const { globby } = await import("globby");
 
+  return [...(await globby("docs/*.md"))]
+    .map((path) => basename(path, ".md"))
+    .filter((slug) => slug !== "index");
+};
+
+const run = async (slugQuery) => {
   await confirmUrl();
 
   await naiveExec(`mkdir -pv "${dir}"`);
   console.log(`Output directory: ${dir}`);
   console.log();
 
-  const slugs = [...(await globby("docs/*.md"))]
-    .map((path) => basename(path, ".md"))
-    .filter((slug) => slug !== "index");
+  const slugs = (await getSlugs()).filter(
+    (slug) => !slugQuery || slug == slugQuery
+  );
+
+  if (slugs.length == 0) {
+    console.log(`Nothing found for "${slugQuery}"`);
+  }
 
   slugs.forEach((slug) => exportPdf(slug));
 
   console.log();
 };
 
-run();
+// TODO: deploy PDFs!
+
+run(process.argv[2]);
