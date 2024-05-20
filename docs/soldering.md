@@ -2,7 +2,7 @@
 
 (this is kind of a brain dump, sry!)
 
-![APC PCB being soldered](/static/images/soldering/apc.jpg)
+![APC PCB being soldered](/static/images/soldering/apc.jpg?size=most)
 
 When you  want to give your circuit a permanent home beyond the breadboard, it's time to solder it up.
 
@@ -12,7 +12,7 @@ Solder is like an electric glue. It's a metal that melts at 600&deg;F and re-sol
 
 I think the best way to learn is through a ["learn to solder" kit](https://www.jameco.com/z/AK-100-Elenco-Electronics-Practice-Soldering-Kit-with-Soldering-Iron_2124218.html). Get one that comes with a soldering iron, solder, and a practice PCB (Printed Circuit Board). Pick up needle-noise pliers and and wire cutters too if you don't already have them.
 
-![old "siren" practice PCB](/static/images/soldering/practice_pcb.jpg)
+![old "siren" practice PCB](/static/images/soldering/practice_pcb.jpg?size=most)
 <small>Don't judge the messiness, I was still learning!</small>
 
 (A cheap soldering iron won't last forever, but it _will_ last long enough for you to decide if you like it enough to want to upgrade. I have a Weller; Hakko is a popular brand. Spend $100-$200 and you'll be set, probably for life.)

@@ -1,6 +1,6 @@
 # Serial vs Parallel
 
-![Spy vs Spy but w/ schematics](/static/images/serial-vs-parallel/spy-vs-spy.png)
+![Spy vs Spy but w/ schematics](/static/images/serial-vs-parallel/spy-vs-spy.png?size=half)
 
 So far we've been using solitary resistors<small>*</small> in class, but they don't always have to be so lonely. Introducing... serial and parallel resistors!
 
@@ -10,7 +10,7 @@ So far we've been using solitary resistors<small>*</small> in class, but they do
 
 Serial means one-after-the-other. Think episodes of a show or the Serial podcast or, uh, a serial killer. Serial resistors in schematic form look like this:
 
-![Serial resistor schematic](/static/images/serial-vs-parallel/serial-schematic.png)
+![Serial resistor schematic](/static/images/serial-vs-parallel/serial-schematic.png?size=most)
 
 The total resistance across serial resistors is straightforward. Just add 'em up! If A is 1k, B is 2k, and C is 3k, then the total is 6k.
 
@@ -18,7 +18,7 @@ The total resistance across serial resistors is straightforward. Just add 'em up
 
 Parallel means lined up. Think geometric lines that never intersect or a stack of pancakes, stuff like that. Schematically:
 
-![Parallel resistor schematic](/static/images/serial-vs-parallel/parallel-schematic.png)
+![Parallel resistor schematic](/static/images/serial-vs-parallel/parallel-schematic.png?size=most)
 
 The total resistance across parallel resistors isn't nearly as easy as it was for serial, huh? If A is 1k, B is 2k, and C is 3k, then the total is... you guessed it... 545ohms.
 
@@ -33,7 +33,7 @@ We know that our oscillator's frequency is set by a capacitor and a resistor, an
 
 Review our typical, single-resistor oscillator schematic:
 
-![typical, single-resistor oscillator schematic](/static/images/serial-vs-parallel/oscillator-schematic.png)
+![typical, single-resistor oscillator schematic](/static/images/serial-vs-parallel/oscillator-schematic.png?size=half)
 
 I don't love the piano layout, but I do like the idea that I can hit some key/switch/button, and it will play a specific note. Let's implement what we just learned and swap out the single resistor for, say, three resistors and three matching switches.
 
@@ -43,7 +43,7 @@ In other words, let's make a three note keyboard!
 
 ### Serial resistors in a relaxation oscillator
 
-![Schematic for relaxation oscillator with switched serial resistors](/static/images/serial-vs-parallel/oscillator-serial-schematic.png)
+![Schematic for relaxation oscillator with switched serial resistors](/static/images/serial-vs-parallel/oscillator-serial-schematic.png?size=most)
 
 <!-- TODO: label buttons, not resistors? -->
 
@@ -55,17 +55,17 @@ At an interface level, however, it's very intuitive. The highest frequency note 
 
 Button C will make the highest resistance and play the lowest frequency of the three, so I want its button to be leftmost as it would be on a piano. On a breadboard, the switches and resistors for this schematic could look like this:
 
-![Serial resistor breadboard example](/static/images/serial-vs-parallel/serial-breadboard.png)
+![Serial resistor breadboard example](/static/images/serial-vs-parallel/serial-breadboard.png?size=most)
 
 If you want these buttons to play the first three notes of a C Major scale, you can use potentiometers and tune them all into place with an instrument tuner. The gotcha is that, because low notes rely on high notes, the instrument will go out of tune when any high note drifts.
 
 ### Parallel resistors in a relaxation oscillator
 
-![Schematic for relaxation oscillator with switched parallel resistors](/static/images/serial-vs-parallel/oscillator-parallel-schematic.png)
+![Schematic for relaxation oscillator with switched parallel resistors](/static/images/serial-vs-parallel/oscillator-parallel-schematic.png?size=most)
 
 And the switches and resistors on your breadboard, again ordered so lower notes are on the left:
 
-![Parallel resistor breadboard example](/static/images/serial-vs-parallel/parallel-breadboard.png)
+![Parallel resistor breadboard example](/static/images/serial-vs-parallel/parallel-breadboard.png?size=most)
 
 The resistor values are changed to match the behavior of the serial example. Button A produces 1k, B 2k, and C 3k. The resultant frequencies will be theoretically identical.
 
@@ -92,7 +92,7 @@ A better question might be... Regardless of which you choose, what are the desig
 
 I thought I could use cars as a visual analogy for serial/parallel resistors, but I was wrong.
 
-![serial/parallel parked cars](/static/images/serial-vs-parallel/cars.png)
+![serial/parallel parked cars](/static/images/serial-vs-parallel/cars.png?size=most)
 
 Why? Why?!
 

@@ -1,6 +1,6 @@
 # Modulation
 
-![AM and PM](/static/images/modulation/am-pm.png?size=most)
+![AM and PM](/static/images/modulation/am-pm.png?size=half&float=right)
 
 "Modulation" just means one thing altering or varying another. For sound, those two things are waves. The first wave is the _carrier_, and it's the rate of modulation. The second wave is the _message_, and it's where the information is.
 

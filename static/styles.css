@@ -15,8 +15,21 @@ img {
   display: block;
 }
 
+img[src*="size=least"] {
+  max-width: 25%;
+}
+
+img[src*="size=half"] {
+  max-width: 50%;
+}
+
 img[src*="size=most"] {
   max-width: 75%;
+}
+
+img[src*="float=right"] {
+  float: right;
+  margin: 0 0 2rem 2rem;
 }
 
 ol img,

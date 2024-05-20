@@ -10,7 +10,7 @@ Let's see what we can do...
 
 ## 1. Small stuff
 
-![phone as magnifier](/static/images/gotchas-and-debugging/iphone_magnifier.jpg)
+![phone as magnifier](/static/images/gotchas-and-debugging/iphone_magnifier.jpg?size=most)
 
 * You can't see without good lighting. Start there.
 * Make like grandpa and break out the magnifying glass. In a pinch, your phone's camera also makes a fine magnifier!
@@ -23,11 +23,11 @@ The two big unfamiliarities I see are for the breadboard and then the IC chips.
 
 Recall that under the hood of your breadboard are rows and columns of conducting metal that grip and connect anything that's plugged into them. Crucially, anywhere there's a gap in the metal there won't be a connection!
 
-![breadboard](/static/images/gotchas-and-debugging/breadboard.png)
+![breadboard](/static/images/gotchas-and-debugging/breadboard.png?size=most)
 
 As for IC chips, with the its notch/dot pointed left and its text facing you to read, its pins are ordered counter-clockwise starting at the lower left. This is how they'll be on your breadboard.
 
-![DIP chip](/static/images/gotchas-and-debugging/dip_chips.png)
+![DIP chip](/static/images/gotchas-and-debugging/dip_chips.png?size=most)
 
 It's common to see chips drawn in portrait mode with the notch at the top too. It's just a rotated view &mdash; pin order is identical.
 
@@ -53,7 +53,7 @@ Which do you prefer? Why?
 
 ## Other Debugging Tips
 
-![rubber duck](http://iamnotagoodartist.com/wp-content/uploads/2011/04/talktome.png)
+![rubber duck](http://iamnotagoodartist.com/wp-content/uploads/2011/04/talktome.png?size=least&float=right)
 
 * Get your [rubber duck](https://en.wikipedia.org/wiki/Rubber_duck_debugging) and start talking to it, out loud. Explain the problem you have and what you're doing about it. Somehow, verbally articulating an issue can manifest a solution. It works! It's real! I've done it for years! (See also: [Shisa Kanko](https://en.wikipedia.org/wiki/Pointing_and_calling))
 * Build incrementally and test as you go. Light the LED &rarr; make a NOT gate or permutate the NAND (see below) with the CD4093 &rarr; convert it into an oscillator and strobe &rarr; make it faster! &rarr; connect it to your amp &rarr; and so on. Fixing small, incremental changes is much easier than fixing a whole, completed circuit.
@@ -69,7 +69,7 @@ I used to do this in class but we ran out of time. (It's also not super exciting
 2. **Default inputs:** pin 1 to -, pin 2 to -
 3. **Show output:** pin 3 to 330 resistor to LED (positive/long leg) to -
 
-![permutate the NAND](/static/images/gotchas-and-debugging/permutate_the_nand.png)
+![permutate the NAND](/static/images/gotchas-and-debugging/permutate_the_nand.png?size=most)
 
 Finish the truth table by alternating pins 1 and 2 on the + and - power rails. If the LED lights, the output is +; if not, it's -.
 

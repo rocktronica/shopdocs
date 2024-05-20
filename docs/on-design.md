@@ -33,7 +33,7 @@ Distinctions between stages are blurry, and they can overlap. The important take
 
 Stages can also loop and cycle, individually or in a subset. You could go through multiple Proof-of-Concepts before you find one you like, with multiple prototypes as you build out its features; and an MVP makes a great base framework to PoC new functions.
 
-[![OKAY 2 prototypes](/static/images/on-design/okay2-prototypes.jpg)](https://blog.tommy.sh/posts/okay-2-synth/)
+[![OKAY 2 prototypes](/static/images/on-design/okay2-prototypes.jpg?size=most)](https://blog.tommy.sh/posts/okay-2-synth/)
 
 Some open questions to consider:
 
@@ -81,6 +81,6 @@ These are its "Principles of Interaction Design," with commentary for our usage:
 
 All of that is well and good and worth considering, BUT we're making novelty musical instruments and noise machines, not helicopter cockpits or hospital equipment! God willing, nobody's life will ever depend on what we'd make with a `CD4093 Quad NAND Schmitt`.
 
-![Mysterious Waltron prototype](/static/images/on-design/waltron.jpg)
+![Mysterious Waltron prototype](/static/images/on-design/waltron.jpg?size=most)
 
 Keep or ditch design rules as you like. Not everything has to make sense. There's a lot of joy to be had in making a weird, harmless thing to confuse people.
