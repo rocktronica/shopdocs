@@ -5,7 +5,7 @@
 set -o errexit
 set -o errtrace
 
-dir="_site/docs"
+dir="_site"
 
 function help() {
     echo "\
@@ -48,13 +48,10 @@ function run() {
     npx @11ty/eleventy
     echo
 
-    # TODO: fix /shopdocs URL stuff on github
     echo "COMMITTING"
     echo "----------"
     git checkout gh-pages
-    mkdir -pv static
     cp -r $dir/* "."
-    cp -r $dir/static/ "./static"
     git add .
     git commit -m "Deploy $dir"
     echo

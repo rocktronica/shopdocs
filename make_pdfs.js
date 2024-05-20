@@ -7,13 +7,12 @@ const { basename } = require("node:path");
 
 const naiveExec = async (command) => (await exec(command)).stdout.trim();
 
-const rootUrl = "http://localhost:8080/docs/";
+const rootUrl = "http://localhost:8080/shopdocs";
 const dir = "output";
-const siteDownloadsDir = "_site/static/downloads";
 
 const confirmUrl = async () => {
   try {
-    await exec(`wget -q --spider "${rootUrl}"`);
+    await exec(`wget -q --spider "${rootUrl}/"`);
   } catch (error) {
     console.log(`${rootUrl} is not available`);
     console.log(`Try 'npx @11ty/eleventy --serve'`);
@@ -32,7 +31,7 @@ const getPageAndBrowser = async (url) => {
 };
 
 const exportPdf = async (slug) => {
-  const url = `${rootUrl}/${slug}`;
+  const url = `${rootUrl}/${slug}/`;
   const outputPath = `${dir}/${slug}.pdf`;
 
   console.log(`Exporting ${outputPath}`);
@@ -73,11 +72,6 @@ const run = async (slugQuery) => {
 
   slugs.forEach((slug) => exportPdf(slug));
 
-  console.log();
-
-  await naiveExec(`mkdir -pv "${siteDownloadsDir}"`);
-  console.log(`Copying to ${siteDownloadsDir}`);
-  await naiveExec(`cp -a  ${dir}/. ${siteDownloadsDir}/`);
   console.log();
 };
 
