@@ -48,13 +48,12 @@ function run() {
     npx @11ty/eleventy
     echo
 
-    # TODO: fix script abort when there's nothing to commit
     echo "COMMITTING"
     echo "----------"
     git checkout gh-pages
     cp -r $dir/* "."
     git add .
-    git commit -m "Deploy $dir"
+    git commit --allow-empty -m "Deploy $dir"
     echo
 
     echo "DEPLOYING"
