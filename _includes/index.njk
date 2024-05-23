@@ -12,9 +12,11 @@
     </style>
   </head>
   <body>
-    <article>
-        {{ content | safe }}
+    {{ content | safe }}
 
+    <h2>(work)shop doc(ument)s</h2>
+
+    <article>
         <table>
             <thead>
                 <tr>
@@ -42,6 +44,30 @@
             </tbody>
         </table>
     </article>
+
+    <article>
+        <h3>Misc other schematics</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>File</th>
+                    <th>Last updated</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%- for file in misc -%}
+                    <tr>
+                        <td>
+                            <a href="/downloads/{{ file.filename }}">
+                            {{ file.filename }}</a>
+                        </td>
+                        <td>{{ file.lastUpdated }}</td>
+                    </tr>
+                {%- endfor -%}
+            </tbody>
+        </table>
+    </article>
+
     <footer>
         <p>
           License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
