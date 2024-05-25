@@ -16,6 +16,8 @@ module.exports = function (eleventyConfig) {
 
     return (await globby("misc")).map((path) => ({
       filename: basename(path),
+
+      // TODO: fix modified time getting mungled by deploy process
       lastUpdated: getPrettyDate(Fs.statSync(path).mtime),
     }));
   });
