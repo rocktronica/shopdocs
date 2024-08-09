@@ -6,17 +6,17 @@ A "live" version is available online with nice PDF downloads: [https://rocktroni
 
 Notes:
 
-* It's mostly auxiliary stuff that got cut for time but still useful/cool enough to warrant sharing.
-* There is no prescribed reading order. They're kind of grab-bag "jelly bean" docs to share as topics come up.
-* Despite being a real live website, format is optimized for PDF and print.
-* I expect the content to change over time, so everything's dated by last update in the footer. Depending on when that was, what's online may be different from the PDFs I share in class.
-* Some stuff might not make sense outside of the context of me talking about it! (Other stuff might not make sense because I wrote it very tiredly in the middle of the night before class in the morning.) Typos,
+- It's mostly auxiliary stuff that got cut for time but still useful/cool enough to warrant sharing.
+- There is no prescribed reading order. They're kind of grab-bag "jelly bean" docs to share as topics come up.
+- Despite being a real live website, format is optimized for PDF and print.
+- I expect the content to change over time, so everything's dated by last update in the footer. Depending on when that was, what's online may be different from the PDFs I share in class.
+- Some stuff might not make sense outside of the context of me talking about it! (Other stuff might not make sense because I wrote it very tiredly in the middle of the night before class in the morning.) Typos,
 
 ## Generating PDFs
 
 Document files are written in markdown, made into a website with eleventy, and then converted to PDF with Chrome via puppeteer.
 
-``` bash
+```bash
 npm install
 
 # Terminal 1
