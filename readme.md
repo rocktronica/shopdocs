@@ -6,11 +6,13 @@ A couple times a year or as demand warrants it, I teach a [workshop on electroni
 
 A "live" version is available online with nice PDF downloads: [https://rocktronica.github.io/shopdocs/](https://rocktronica.github.io/shopdocs/)
 
-Notes:
+## Notes:
+
+![shopdocs schematic cards](static/schematic_cards-1-638-8-gifski-60.gif)
 
 - It's mostly supplemental stuff that got cut for time but still useful/cool enough to warrant sharing.
 - There is no prescribed reading order. They're kind of grab-bag "jelly bean" docs to share as topics come up.
-- Despite being a real live website, format is optimized for PDF and print.
+- Despite being a real live website, format is optimized for PDF and print, so as to be put on the class Google Drive.
 - I expect the content to change over time, so everything's dated by last update in the footer. Depending on when that was, what's online may be different from the PDFs I share in class.
 - Some stuff might not make sense outside of the context of me talking about it! (Other stuff might not make sense because I wrote it very tiredly in the middle of the night without spellcheck before class in the morning.) Typos,
 
