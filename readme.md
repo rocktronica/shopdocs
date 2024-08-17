@@ -4,6 +4,8 @@
 
 A couple times a year or as demand warrants it, I teach a [workshop on electronics and DIY synthesizers](https://dogbotic.com/diy-synthesizers). This repo is the source to the documents I write to share with my section.
 
+![shopdocs](static/header.png)
+
 A "live" version is available online with nice PDF downloads: [https://rocktronica.github.io/shopdocs/](https://rocktronica.github.io/shopdocs/)
 
 ## Notes:
@@ -12,6 +14,7 @@ A "live" version is available online with nice PDF downloads: [https://rocktroni
 - There is no prescribed reading order. They're kind of grab-bag "jelly bean" docs to share as topics come up.
 - Despite being a real live website, format is optimized for PDF and print, so as to be put on the class Google Drive.
 - I expect the content to change over time, so everything's dated by last update in the footer. Depending on when that was, what's online may be different from the PDFs I share in class.
+- Schematics were done in Kicad, drawings on an iPad.
 - Some stuff might not make sense outside of the context of me talking about it! (Other stuff might not make sense because I wrote it very tiredly in the middle of the night without spellcheck before class in the morning.) Typos,
 
 ## Generating PDFs
@@ -42,7 +45,7 @@ To update the website, make PDFs then run `./deploy.sh`
 
 ## License
 
-![shopdocs](static/header.png)
+![CC BY-SA 4.0](static/by-sa.svg)
 
 Text and drawing content is all [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Please retain my attribution if sharing, TYSM.
 
