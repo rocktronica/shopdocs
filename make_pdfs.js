@@ -30,9 +30,11 @@ const getPageAndBrowser = async (url) => {
   return { page, browser };
 };
 
+const getOutputPath = (slug, extension) => `${dir}/${slug}.${extension}`;
+
 const exportPdf = async (slug) => {
   const url = `${rootUrl}/${slug}/`;
-  const outputPath = `${dir}/${slug}.pdf`;
+  const outputPath = getOutputPath(slug, "pdf");
 
   console.log(`Exporting ${outputPath}`);
 
@@ -45,6 +47,19 @@ const exportPdf = async (slug) => {
   });
 
   await browser.close();
+};
+
+const exportPreview = async (slug) => {
+  const inputPath = getOutputPath(slug, "pdf");
+  const outputPath = getOutputPath(slug, "png");
+
+  // TODO: improve text rendering
+  console.log(`Exporting ${outputPath}`);
+  await naiveExec(
+    `convert "${inputPath}[0]" \
+      -background white -flatten -alpha off \
+      "${outputPath}"`
+  );
 };
 
 const getSlugs = async () => {
@@ -70,7 +85,8 @@ const run = async (slugQuery) => {
     console.log(`Nothing found for "${slugQuery}"`);
   }
 
-  slugs.forEach((slug) => exportPdf(slug));
+  slugs.forEach(exportPdf);
+  slugs.forEach(exportPreview);
 
   console.log();
 };
