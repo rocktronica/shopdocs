@@ -49,17 +49,25 @@ const exportPdf = async (slug) => {
   await browser.close();
 };
 
+// NOTE: "page" dimensions are imperfect but text is good
 const exportPreview = async (slug) => {
-  const inputPath = getOutputPath(slug, "pdf");
+  const url = `${rootUrl}/${slug}/`;
   const outputPath = getOutputPath(slug, "png");
 
-  // TODO: improve text rendering
   console.log(`Exporting ${outputPath}`);
-  await naiveExec(
-    `convert "${inputPath}[0]" \
-      -background white -flatten -alpha off \
-      "${outputPath}"`
-  );
+
+  const { page, browser } = await getPageAndBrowser(url);
+
+  const DPI = 96;
+  await page.setViewport({
+    width: 8.5 * DPI,
+    height: 11 * DPI,
+    deviceScaleFactor: 2,
+  });
+
+  await page.screenshot({ path: outputPath });
+
+  await browser.close();
 };
 
 const getSlugs = async () => {
@@ -85,10 +93,9 @@ const run = async (slugQuery) => {
     console.log(`Nothing found for "${slugQuery}"`);
   }
 
-  slugs.forEach(exportPdf);
-  slugs.forEach(exportPreview);
-
+  await Promise.all(slugs.map(exportPdf));
   console.log();
+  await Promise.all(slugs.map(exportPreview));
 };
 
 run(process.argv[2]);
