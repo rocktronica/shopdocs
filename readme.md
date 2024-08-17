@@ -1,10 +1,8 @@
-# (work)shop doc(ument)s
+![shopdocs](/banner.png)
 
-![shopdocs schematic cards](static/schematic_cards-800-60-4.gif)
+## (work)shop doc(ument)s
 
 A couple times a year or as demand warrants it, I teach a [workshop on electronics and DIY synthesizers](https://dogbotic.com/diy-synthesizers). This repo is the source to the documents I write to share with my section.
-
-![shopdocs](static/header.png)
 
 A "live" version is available online with nice PDF downloads: [https://rocktronica.github.io/shopdocs/](https://rocktronica.github.io/shopdocs/)
 
@@ -41,6 +39,8 @@ To update the website, make PDFs then run `./deploy.sh`
 
 ## TODO
 
+![shopdocs schematic cards](static/schematic_cards-800-60-4.gif)
+
 - Per page footers w/ page numbers
 
 ## License
@@ -48,5 +48,7 @@ To update the website, make PDFs then run `./deploy.sh`
 ![CC BY-SA 4.0](static/by-sa.svg)
 
 Text and drawing content is all [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Please retain my attribution if sharing, TYSM.
+
+![shopdocs](static/header.png)
 
 Code is MIT or as components allow.

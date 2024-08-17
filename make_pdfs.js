@@ -70,6 +70,25 @@ const exportPreview = async (slug) => {
   await browser.close();
 };
 
+const updateBanner = async () => {
+  const url = `${rootUrl}/banner/`;
+  const outputPath = `./banner.png`;
+
+  console.log(`Updating ${outputPath}`);
+
+  const { page, browser } = await getPageAndBrowser(url);
+
+  await page.setViewport({
+    width: 900,
+    height: 300,
+    deviceScaleFactor: 2,
+  });
+
+  await page.screenshot({ path: outputPath });
+
+  await browser.close();
+};
+
 const getSlugs = async () => {
   const { globby } = await import("globby");
 
@@ -95,7 +114,11 @@ const run = async (slugQuery) => {
 
   await Promise.all(slugs.map(exportPdf));
   console.log();
+
   await Promise.all(slugs.map(exportPreview));
+  console.log();
+
+  await updateBanner();
 };
 
 run(process.argv[2]);

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" class="banner">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ content | getH1Text }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        table { width: 100%; table-layout: auto; }
+        table th, table td { padding: .125rem .5rem; text-align: left; }
+    </style>
+  </head>
+  <body>
+    {{ content | safe }}
+
+    {# TODO: don't break #}
+
+    <ul>
+        {%- for post in collections.docs -%}
+            <li>
+                <img
+                    src="/downloads/{{ post.fileSlug }}.png"
+                    alt="{{ post.content | getH1Text }}" />
+            </li>
+        {%- endfor -%}
+    </ul>
+  </body>
+</html>
