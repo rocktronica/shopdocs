@@ -6,6 +6,10 @@ A couple times a year or as demand warrants it, I teach a [workshop on electroni
 
 A "live" version is available online with nice PDF downloads: [https://rocktronica.github.io/shopdocs/](https://rocktronica.github.io/shopdocs/)
 
+_(Importantly, this is the source code for resources I made for my section only, not the other instructors' stuff nor the real core material. Any opinions or errors they have are all mine. Obviously, it is no replacement for taking the actual workshop!)_
+
+**Blog post:** [https://blog.tommy.sh/posts/shopdocs/](https://blog.tommy.sh/posts/shopdocs/)
+
 ## Notes:
 
 - It's mostly supplemental stuff that got cut for time but still useful/cool enough to warrant sharing.
@@ -34,14 +38,16 @@ Works For Me!
 
 <!--
 FOR TOMMY:
-To update the website, make PDFs then run `./deploy.sh`
+* To update the website, make PDFs then run `./deploy.sh`
+* If any resource URLs change, remember to update blog post too!
 -->
 
 ## TODO
 
-![shopdocs schematic cards](static/schematic_cards-800-60-4.gif)
+![shopdocs schematic cards](static/schematic_cards-75.gif)
 
 - Per page footers w/ page numbers
+- Smarter make_pdfs.js URL confirmation
 
 ## License
 
